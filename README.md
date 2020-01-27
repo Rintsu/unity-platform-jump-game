@@ -2,7 +2,7 @@
 
 Game contains basic functions for platform jump game.
 
-###Player can:
+######Player can:
 ```
 - Move forward
 - Move backward
@@ -11,10 +11,10 @@ Game contains basic functions for platform jump game.
 - Get hurt if colliding with enemy
 - Kill an enemy
 ```
-###Enemy can:
+######Enemy can:
 ```
 - Move inside certain area
 - Explode when player jumps on top of them
 ```
 
-Made with [Alvin Roe's tutorial] (https://www.youtube.com/channel/UCBEzA1UQD310iEdiQGgWqwg)
+Made with [Alvin Roe's tutorial](https://www.youtube.com/channel/UCBEzA1UQD310iEdiQGgWqwg)
