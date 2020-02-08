@@ -11,7 +11,7 @@ public class Frog : Enemy //Inheritance from Enemy.cs
     [SerializeField] private float jumpHeight = 15f;
     [SerializeField] private LayerMask ground;
     private Collider2D coll;
-    private Rigidbody2D rb; //Rigidbody is for controlling speed and moving
+    //private Rigidbody2D rb; //Rigidbody is for controlling speed and moving
 
     private bool facingLeft = true;
 
@@ -19,7 +19,7 @@ public class Frog : Enemy //Inheritance from Enemy.cs
     {
         base.Start(); // base is whatever you inherit from the parent
         coll = GetComponent<Collider2D>();
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()

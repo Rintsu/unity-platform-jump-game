@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    protected Animator anim; //Enemy's children (this case Frog) can have access to 'protected' functions
+    protected Animator anim; //Enemy's children (Frog and Eagle) can have access to 'protected' functions
+    protected Rigidbody2D rb;
+    protected AudioSource death;
     
     protected virtual void Start() //Children can use this function and override it when 'virtual'
     {
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        death = GetComponent<AudioSource>();
     }
 
     //Death parameter is set as a Trigger in Frog Animator view
@@ -16,6 +20,10 @@ public class Enemy : MonoBehaviour
     public void JumpedOn()
     {
         anim.SetTrigger("Death");
+        death.Play();
+        rb.velocity = Vector2.zero; // same as: new Vector2(0, 0);
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        GetComponent<Collider2D>().enabled = false;
     }
 
     //Destroy the whole Frog object
